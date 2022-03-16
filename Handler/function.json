@@ -3,7 +3,7 @@
     "bindings": [
       {
         "route": "{*route}",      
-        "authLevel": "function",
+        "authLevel": "anonymous",
         "type": "httpTrigger",
         "direction": "in",
         "name": "req",
