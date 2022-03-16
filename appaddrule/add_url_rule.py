@@ -13,9 +13,11 @@ app = Flask(__name__)
 
 app.add_url_rule('/addrule', 'webio_view', webio_view(partial(tiktoka, lang='')),
                     methods=['GET', 'POST', 'OPTIONS'])
-app.add_url_rule('/addrule/en', 'webio_view_en', webio_view(partial(tiktoka, lang='en')),
+app.add_url_rule('/addrule/tiktoka', 'webio_view_tiktoka', webio_view(partial(tiktoka, lang='en')),
                     methods=['GET', 'POST', 'OPTIONS'])
 
+app.add_url_rule('/addrule/takegift', 'webio_view_gift', webio_view(partial(take_gift, lang='en')),
+                    methods=['GET', 'POST', 'OPTIONS'])
 
 # if (os.environ.get('PORT')):
 #     port = int(os.environ.get('PORT'))
