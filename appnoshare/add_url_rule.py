@@ -4,15 +4,19 @@ from pywebio.input import *
 from pywebio.platform.flask import webio_view
 import os
 from functools import partial
-from shared.app import  take_gift
 
 app = Flask(__name__)
+def take_gift(lang):
+    lang = lang or 'en'
+    gift = select('Which gift you want?', ['keyboard', 'ipad'])
+    put_text("HHHHHHHHHHHH")
+
 
 # if __name__ == "__main__":
 
-app.add_url_rule('/', 'webio_view', webio_view(partial(take_gift, lang='')),
+app.add_url_rule('/noshare', 'webio_view', webio_view(partial(take_gift, lang='')),
                     methods=['GET', 'POST', 'OPTIONS'])
-app.add_url_rule('/en', 'webio_view_en', webio_view(partial(take_gift, lang='en')),
+app.add_url_rule('/noshare/en', 'webio_view_en', webio_view(partial(take_gift, lang='en')),
                     methods=['GET', 'POST', 'OPTIONS'])
 
 
