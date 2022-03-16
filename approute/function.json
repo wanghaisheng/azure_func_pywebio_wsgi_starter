@@ -2,7 +2,7 @@
   "scriptFile": "__init__.py",
   "bindings": [
     {
-      "route": "/addrule/{*route}",      
+      "route": "/route/{*route}",      
       "authLevel": "anonymous",
       "type": "httpTrigger",
       "direction": "in",

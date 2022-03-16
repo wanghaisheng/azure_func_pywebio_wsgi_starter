@@ -40,7 +40,11 @@ either add url rule and route works
 
 choose one you like
 
+futher test result:
 
+* route mode ,local func start ok  ,cloud deploy ok
+
+* add rule mode, local func start ok,cloud deploy 
 
 
 ## automatic  github action deploy
