@@ -4,13 +4,9 @@ from pywebio.input import *
 from pywebio.platform.flask import webio_view
 import os
 from functools import partial
+from shared.app import  take_gift
 
 app = Flask(__name__)
-
-def take_gift(lang):
-    lang = lang or 'en'
-    gift = select('Which gift you want?', ['keyboard', 'ipad'])
-    put_text("HHHHHHHHHHHH")
 
 # if __name__ == "__main__":
 
