@@ -1,5 +1,6 @@
 
 **CAUTION**
+
 1.pls use vscode instead of azure cloud portal to create a function app, **i dont know why  but only creation from vscode can work!!!!**
 
 in your existing code project ,right click you can find deploy to
@@ -9,12 +10,25 @@ https://user-images.githubusercontent.com/2363295/158590455-130e90e0-f606-48c2-a
 
 follow the steps you can finally got  a function app
 
+
 2. configure github repo in portal ,you dont need any manually edit github action yml and edit publish profile in github repo token at all.it is all automatically setted
 
 
 
 https://user-images.githubusercontent.com/2363295/158590643-fcf204a7-c58b-4357-af95-aeac8bbe8d59.mp4
 
+
+
+
+3.  route prefix is important
+
+```
+
+  "extensions": {
+    "http": {
+      "routePrefix": ""
+    }
+```
 
 # azure_func_pywebio_wsgi_starter
 
